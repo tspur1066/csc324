@@ -21,4 +21,6 @@
 
 // Solution #1: 
 
+console.log()
+
 
