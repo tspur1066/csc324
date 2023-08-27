@@ -1,4 +1,5 @@
-console.log(let abc = "#");
+const abc = "#"
+console.log(abc);
 
 const greeting = "Hello ";
 
@@ -8,7 +9,8 @@ console.log(symb * 2);
 
 symb;
 
-while(symb.length = );
+abc
+
 
 console.log("#");
 
