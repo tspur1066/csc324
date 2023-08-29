@@ -53,7 +53,7 @@ while (counter <= 100) {
     if (counter % )
 }
 
-
+//Doc White said to do this one last!!!
 
 
 
@@ -67,12 +67,18 @@ while (counter <= 100) {
 
 // Passing this string to console.log should show something like this:
 
-// # # # #
+//  # # # #
 // # # # # 
-// # # # #
+//  # # # #
 // # # # # 
-// # # # #
+//  # # # #
 // # # # # 
+//  # # # #
 // # # # #
-// # # # #
+
+
+
+// Solution #3
+
+
 
