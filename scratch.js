@@ -30,13 +30,16 @@ for (let length = symbol.length; symbol.length <= 7; symbol += "#") {
 
 let counter = 1;
 while (counter <= 100) {
-    if (counter % 3 != 0) {
-        console.log(counter)
-    } else if (counter % 3 = 0) {
-        console.log("Fizz")
-    } else if (counter % 5 = 0 & counter % 3 != 0) {
-        console.log("Buzz")
-    }
+    if (counter % 3 != 0 & counter % 5 != 0) {
+    console.log(counter);
+    } if (counter % 3 == 0 & counter % 5 == 0) {
+        console.log("FizzBuzz");
+    } if (counter % 3 == 0 & counter % 5 != 0) {
+        console.log("Fizz");
+    } if (counter % 5 == 0 & counter % 3 != 0) {
+        console.log("Buzz");
+    } 
+    counter += 1;
 }
 
 
