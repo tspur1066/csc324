@@ -43,7 +43,35 @@ while (counter <= 100) {
 }
 
 
+size = prompt("Choose a number.");
+console.log(size*2);
 
+let size = 6;
+let row = "";
+let counter_1 = 1;
+while (counter_1 <= size) {
+    let counter_2 = 0;
+    if (counter_1 % 2 != 0) {
+        row += " ";
+
+    }
+    while (counter_2 <= size) {
+        if (counter_2 >= size) {
+            row += "\n";
+        } else if (counter_2 % 2 == 0) {
+            row += "#";
+            
+        } else if (counter_2 % 2 != 0 & counter_2 != size) {
+            row += " ";
+        } else if (counter_2 % 2 != 0 & counter_2 == size & counter_1 % 2 != 0) [
+            row += "\n"
+
+        ]
+        counter_2 += 1
+        }
+        counter_1 += 1;
+    }
+console.log(row);
 
 
 
