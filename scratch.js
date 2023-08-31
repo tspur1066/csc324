@@ -46,7 +46,7 @@ while (counter <= 100) {
 size = prompt("Choose a number.");
 console.log(size*2);
 
-let size = 6;
+let size = 8;
 let row = "";
 let counter_1 = 1;
 while (counter_1 <= size) {
@@ -90,14 +90,14 @@ while (counter <= 4) {
 
 //8x8 Grid
 
-let test_1 = " # # # #\n";
-let test_2 = "# # # # ";
+let line_1 = " # # # #\n";
+let line_2 = "# # # # ";
 for (let counter = 0; counter <= 3; counter = counter + 1) {
-    test_3 = test_1 + test_2
-    console.log(test_3)
+    line_3 = line_1 + line_2
+    console.log(line_3)
 }
 
-for (let )
+
 
 //Any size grid
 

@@ -106,5 +106,43 @@ while (counter <= 100) {
 
 // Solution #3
 
+//8x8 Grid
 
+let line_1 = " # # # #\n";
+let line_2 = "# # # # ";
+for (let counter = 0; counter <= 3; counter = counter + 1) {
+    line_3 = line_1 + line_2
+    console.log(line_3)
+}
+
+
+
+// Any Size Grid
+
+let size = 8;
+let row = "";
+let counter_1 = 1;
+while (counter_1 <= size) {
+    let counter_2 = 0;
+    if (counter_1 % 2 != 0) {
+        row += " ";
+
+    }
+    while (counter_2 <= size) {
+        if (counter_2 >= size) {
+            row += "\n";
+        } else if (counter_2 % 2 == 0) {
+            row += "#";
+            
+        } else if (counter_2 % 2 != 0 & counter_2 != size) {
+            row += " ";
+        } else if (counter_2 % 2 != 0 & counter_2 == size & counter_1 % 2 != 0) [
+            row += "\n"
+
+        ]
+        counter_2 += 1
+        }
+        counter_1 += 1;
+    }
+console.log(row);
 
