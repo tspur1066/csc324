@@ -43,6 +43,9 @@ while (counter <= 100) {
 }
 
 
+
+
+
 size = prompt("Choose a number.");
 console.log(size*2);
 

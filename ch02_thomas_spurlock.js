@@ -102,7 +102,8 @@ while (counter <= 100) {
 //  # # # #
 // # # # #
 
-
+// When you have a program that generates this pattern, define a binding size = 8 
+//and change the program so that it works for any size, outputting a grid of the given width and height.
 
 // Solution #3
 
@@ -126,19 +127,42 @@ while (counter_1 <= size) {
     let counter_2 = 0;
     if (counter_1 % 2 != 0) {
         row += " ";
-
     }
     while (counter_2 <= size) {
         if (counter_2 >= size) {
             row += "\n";
         } else if (counter_2 % 2 == 0) {
             row += "#";
-            
         } else if (counter_2 % 2 != 0 & counter_2 != size) {
             row += " ";
-        } else if (counter_2 % 2 != 0 & counter_2 == size & counter_1 % 2 != 0) [
-            row += "\n"
+        } else if (counter_2 % 2 != 0 & counter_2 == size - 1 & counter_1 % 2 != 0) [
+            row += "#\n"
+        ]
+        counter_2 += 1
+        }
+        counter_1 += 1;
+    }
+console.log(row);
 
+//Trying with a 10x10 grid
+
+let size = 10;
+let row = "";
+let counter_1 = 1;
+while (counter_1 <= size) {
+    let counter_2 = 0;
+    if (counter_1 % 2 != 0) {
+        row += " ";
+    }
+    while (counter_2 <= size) {
+        if (counter_2 >= size) {
+            row += "\n";
+        } else if (counter_2 % 2 == 0) {
+            row += "#";
+        } else if (counter_2 % 2 != 0 & counter_2 != size) {
+            row += " ";
+        } else if (counter_2 % 2 != 0 & counter_2 == size - 1 & counter_1 % 2 != 0) [
+            row += "\n"
         ]
         counter_2 += 1
         }
