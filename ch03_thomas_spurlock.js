@@ -10,10 +10,10 @@
 // Solution #1
 
 const little_math = function(x, y) {
-    console.log(Math.min(x,y))
+    console.log(Math.min(x,y));
 }
-little_math(-200, -10)
-little_math(25, 20000)
+little_math(-200, -10);
+little_math(25, 20000);
 
 
 
@@ -36,17 +36,17 @@ little_math(25, 20000)
 
 const isEven = function(x) {
     if (x < 0) {
-        return console.log("!!!!x must be a positive number!!!!")
+        return console.log("!!!!x must be a positive number!!!!");
     }
     if (x == 1) {
-        return console.log("Odd")
+        return console.log("Odd");
     } else if (x == 0) {
-        return console.log("Even")
-    } else return isEven(x - 2)
+        return console.log("Even");
+    } else return isEven(x - 2);
 }
-isEven(50)
-isEven(75)
-isEven(-1)
+isEven(50);
+isEven(75);
+isEven(-1);
 
 
 
@@ -68,7 +68,7 @@ isEven(-1)
 
 // Solution #3
 
-// code
+// 
 
 
 

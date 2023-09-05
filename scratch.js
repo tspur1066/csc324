@@ -110,3 +110,14 @@ for (let counter = 0; counter <= 3; counter = counter + 1) {
 let test_3 = " # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # \n";
 console.log(test_3.length);
 
+
+// Chapter 3 HW
+
+
+
+
+
+
+
+
+
