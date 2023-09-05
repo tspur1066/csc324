@@ -48,6 +48,8 @@ isEven(50);
 isEven(75);
 isEven(-1);
 
+// Because negative numbers are less than both 0 and 1, their evenness or oddness cannot
+// be tested simply using the n-2 method, so they must be accounted for in the code.
 
 
 
@@ -64,11 +66,52 @@ isEven(-1);
 
 // Next, write a function called countChar that behaves like countBs, except it
 // takes a second argument that indicates the character that is to be counted 
-//(rather than counting only uppercase “B” characters). Rewrite countBs to make use of this new function.
+// (rather than counting only uppercase “B” characters). Rewrite countBs to make use of this new function.
 
 // Solution #3
 
-// 
+// B counter
+
+const countBs = function(str) {
+    if (typeof(str) != "string") {
+        return console.log("!!!!!str must be a string!!!!!")
+    }
+    let B_counter = 0;
+    for (let str_place = 0; str_place <= str.length; str_place += 1) {
+        str[str_place];
+        if (str[str_place] == "B") {
+            B_counter += 1;
+        }
+    }
+    return console.log(B_counter);
+}
+countBs("Botany")
+countBs("BBC")
+countBs("BBBBBB")
+countBs(1)
+
+// Any string counter
+
+const countChar = function(str, character) {
+    if (typeof(str) != "string" | typeof(character) != "string") {
+        return console.log("!!!!!str and character must be strings!!!!!")
+    }
+    let char_counter = 0;
+    for (let char_place = 0; char_place <= str.length; char_place += 1) {
+        str[char_place];
+        if (str[char_place] == character) {
+            char_counter += 1;
+        }
+    }
+    return console.log(char_counter);
+}
+countChar("Botany", "B")
+countChar("BBC", "C")
+countChar("BBC", "b")
+countChar("BBBBBB", "C")
+countChar("Lepsipopacopolus", "p")
+countChar(1, "f")
+countChar("Michael", 1)
 
 
 
