@@ -18,6 +18,7 @@ little_math(25, 20000)
 
 
 
+
 // Problem #2 - Recursion
 
 // We’ve seen that % (the remainder operator) can be used to test whether a number is even or odd by using % 2 
@@ -33,7 +34,19 @@ little_math(25, 20000)
 
 // Solution 2
 
-//code
+const isEven = function(x) {
+    if (x < 0) {
+        return console.log("!!!!x must be a positive number!!!!")
+    }
+    if (x == 1) {
+        return console.log("Odd")
+    } else if (x == 0) {
+        return console.log("Even")
+    } else return isEven(x - 2)
+}
+isEven(50)
+isEven(75)
+isEven(-1)
 
 
 
