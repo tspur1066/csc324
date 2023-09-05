@@ -50,34 +50,34 @@ for (let length = symbol.length; symbol.length <= 7; symbol += "#") {
 
 // Fizz and Buzz
 
-let counter = 1;
-while (counter <= 100) {
-    if (counter % 3 != 0 & counter % 5 != 0) {
-    console.log(counter);
-    } if (counter % 3 == 0 & counter % 5 == 0) {
+let numbercounter = 1;
+while (numbercounter <= 100) {
+    if (numbercounter % 3 != 0 & numbercounter % 5 != 0) {
+    console.log(numbercounter);
+    } if (numbercounter % 3 == 0 & numbercounter % 5 == 0) {
         console.log("Fizz");
-    } if (counter % 3 == 0 & counter % 5 != 0) {
+    } if (numbercounter % 3 == 0 & numbercounter % 5 != 0) {
         console.log("Fizz");
-    } if (counter % 5 == 0 & counter % 3 != 0) {
+    } if (numbercounter % 5 == 0 & numbercounter % 3 != 0) {
         console.log("Buzz");
     } 
-    counter += 1;
+    numbercounter += 1;
 }
 
 // FizzBuzz
 
-let counter = 1;
-while (counter <= 100) {
-    if (counter % 3 != 0 & counter % 5 != 0) {
-    console.log(counter);
-    } if (counter % 3 == 0 & counter % 5 == 0) {
+let fizzycounter = 1;
+while (fizzycounter <= 100) {
+    if (fizzycounter % 3 != 0 & fizzycounter % 5 != 0) {
+    console.log(fizzycounter);
+    } if (fizzycounter % 3 == 0 & fizzycounter % 5 == 0) {
         console.log("FizzBuzz");
-    } if (counter % 3 == 0 & counter % 5 != 0) {
+    } if (fizzycounter % 3 == 0 & fizzycounter % 5 != 0) {
         console.log("Fizz");
-    } if (counter % 5 == 0 & counter % 3 != 0) {
+    } if (fizzycounter % 5 == 0 & fizzycounter % 3 != 0) {
         console.log("Buzz");
     } 
-    counter += 1;
+    fizzycounter += 1;
 }
 
 
@@ -146,12 +146,12 @@ console.log(row);
 
 //Trying with a 10x10 grid
 
-let size = 10;
-let row = "";
-let counter_1 = 1;
-while (counter_1 <= size) {
+let grid_size = 10;
+let grid_row = "";
+let gridcounter_1 = 1;
+while (gridcounter_1 <= size) {
     let counter_2 = 0;
-    if (counter_1 % 2 != 0) {
+    if (gridcounter_1 % 2 != 0) {
         row += " ";
     }
     while (counter_2 <= size) {
@@ -161,12 +161,12 @@ while (counter_1 <= size) {
             row += "#";
         } else if (counter_2 % 2 != 0 & counter_2 != size) {
             row += " ";
-        } else if (counter_2 % 2 != 0 & counter_2 == size - 1 & counter_1 % 2 != 0) [
+        } else if (counter_2 % 2 != 0 & counter_2 == size - 1 & gridcounter_1 % 2 != 0) [
             row += "\n"
         ]
         counter_2 += 1
         }
-        counter_1 += 1;
+        gridcounter_1 += 1;
     }
 console.log(row);
 
