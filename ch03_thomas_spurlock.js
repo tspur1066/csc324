@@ -9,8 +9,11 @@
 
 // Solution #1
 
-//code
-
+const little_math = function(x, y) {
+    console.log(Math.min(x,y))
+}
+little_math(-200, -10)
+little_math(25, 20000)
 
 
 
