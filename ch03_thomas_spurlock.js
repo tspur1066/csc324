@@ -90,7 +90,7 @@ countBs("BBC")
 countBs("BBBBBB")
 countBs(1)
 
-// Any string counter
+// Any character counter
 
 const countChar = function(str, character) {
     if (typeof(str) != "string" | typeof(character) != "string") {
