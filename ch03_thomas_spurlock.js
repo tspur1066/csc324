@@ -1,6 +1,8 @@
 // Thomas Spurlock
 // Due: September 7th, 2023
 
+
+
 // Problem #1 - Minimum
 
 // The previous chapter introduced the standard function Math.min that returns
@@ -50,6 +52,7 @@ isEven(-1);
 
 // Because negative numbers are less than both 0 and 1, their evenness or oddness cannot
 // be tested simply using the n-2 method, so they must be accounted for in the code.
+
 
 
 
