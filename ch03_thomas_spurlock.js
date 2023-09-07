@@ -53,6 +53,30 @@ isEven(-1);
 // Because negative numbers are less than both 0 and 1, their evenness or oddness cannot
 // be tested simply using the n-2 method, so they must be accounted for in the code.
 
+// Alternatively, you could also make it so that any inputted negative number is made positive,
+// and then the n - 2 method could be employed.
+
+const negisEven = function(x) {
+    if (x < 0) {
+        let neg_x = -x;
+        if (neg_x == 1) {
+            return console.log("Odd");
+        } else if (neg_x == 0) {
+            return console.log("Even");
+        }
+            else return negisEven(neg_x - 2)
+    }
+    if (x == 1) {
+        return console.log("Odd");
+    } else if (x == 0) {
+        return console.log("Even");
+    } else return negisEven(x - 2);
+}
+negisEven(-3)
+negisEven(-2)
+negisEven(200)
+negisEven(-200)
+
 
 
 
