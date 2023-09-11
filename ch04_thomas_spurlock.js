@@ -9,7 +9,7 @@
 // The introduction of this book alluded to the following
 // as a nice way to compute the sum of a range of numbers:
 
-console.log(sum(range(1, 10)));
+// console.log(sum(range(1, 10)));
 
 
 // Write a range function that takes two arguments, start and end,
@@ -26,6 +26,58 @@ console.log(sum(range(1, 10)));
 
 
 // Solution #1
+
+// Range function
+
+let range = function(start, end) {
+    let complete = [];
+    if (start > end) {
+        for (let i = start; i >= end; i -= 1) {
+            complete.push(i);
+        }
+        return complete;
+    }
+    else for (let i = start; i <= end; i += 1) {
+        complete.push(i);
+    }
+    return complete;
+}
+console.log(range(1,3))
+console.log(range(3,1))
+
+// Sum function
+
+let sum = function(array) {
+    let summed_array = 0;
+    for (let i = 0; i < array.length; i += 1) {
+        summed_array += array[i];
+    }
+    return summed_array;
+}
+let test = [1,2,3,4]
+console.log(sum(test))
+
+// Testing the example command
+
+console.log(sum(range(1,10)))
+
+// Added step parameter
+
+let range2 = function(start, end, step = 1) {
+    let complete = [];
+    if (start > end) {
+        for (let i = start; i >= end; i -= step) {
+            complete.push(i);
+        }
+        return complete;
+    }
+    else for (let i = start; i <= end; i += step) {
+        complete.push(i);
+    }
+    return complete;
+}
+console.log(range2(1,10, 2))
+console.log(sum(range2(1,10, 2)))
 
 
 
