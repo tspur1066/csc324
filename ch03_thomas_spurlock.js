@@ -127,14 +127,13 @@ const countChar = function(str, character) {
     }
     let char_counter = 0;
     for (let char_place = 0; char_place <= str.length; char_place += 1) {
-        str[char_place];
         if (str[char_place] == character) {
             char_counter += 1;
         }
     }
-    return console.log(char_counter);
+    return char_counter;
 }
-countChar("Botany", "B")
+console.log(countChar("Botany", "B"))
 countChar("BBC", "C")
 countChar("BBC", "b")
 countChar("BBBBBB", "C")
