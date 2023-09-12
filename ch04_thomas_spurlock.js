@@ -99,6 +99,23 @@ console.log(sum(range2(1,10, 2)))
 // Solution #2
 
 
+// reverseArray function
+
+let reverseArray = function(array) {
+    let reversed_array = [];
+    let rev_place = array.length;
+    for (let i = 1; i <= rev_place; i += 1) {
+        reversed_array.push(array[rev_place - i]);
+    }
+    return reversed_array;
+}
+let test_rev = [1,2,3,4,5,4,3,2,0];
+console.log(reverseArray(test_rev));
+console.log(reverseArray(["Todd", "MacIntyre", 1, "Aquinas"]))
+
+// reverseArrayInPlace
+
+// code
 
 
 
