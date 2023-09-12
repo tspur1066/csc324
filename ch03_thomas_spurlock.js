@@ -60,22 +60,24 @@ const negisEven = function(x) {
     if (x < 0) {
         let neg_x = -x;
         if (neg_x == 1) {
-            return console.log("FALSE");
+            return false;
         } else if (neg_x == 0) {
-            return console.log("TRUE");
+            return true;
         }
             else return negisEven(neg_x - 2)
     }
     if (x == 1) {
-        return console.log("FALSE");
+        return false;
     } else if (x == 0) {
-        return console.log("TRUE");
+        return true;
     } else return negisEven(x - 2);
 }
-negisEven(-3)
-negisEven(-2)
-negisEven(200)
-negisEven(-200)
+negisEven(-3);
+negisEven(-2);
+negisEven(200);
+negisEven(-200);
+let result = negisEven(73);
+console.log(result);
 
 
 
