@@ -123,7 +123,7 @@ countBs(1)
 
 const countChar = function(str, character) {
     if (typeof(str) != "string" | typeof(character) != "string") {
-        return console.log("!!!!!str and character must be strings!!!!!")
+        return "!!!!!str and character must be strings!!!!!";
     }
     let char_counter = 0;
     for (let char_place = 0; char_place <= str.length; char_place += 1) {
@@ -133,13 +133,13 @@ const countChar = function(str, character) {
     }
     return char_counter;
 }
-console.log(countChar("Botany", "B"))
-countChar("BBC", "C")
-countChar("BBC", "b")
-countChar("BBBBBB", "C")
-countChar("Lepsipopacopolus", "p")
-countChar(1, "f")
-countChar("Michael", 1)
+console.log(countChar("Botany", "B"));
+console.log(countChar("BBC", "C"));
+console.log(countChar("BBC", "b"));
+console.log(countChar("BBBBBB", "C"));
+console.log(countChar("Lepsipopacopolus", "p"));
+console.log(countChar(1, "f"));
+console.log(countChar("Michael", 1));
 
 
 
