@@ -45,21 +45,22 @@ let range = function(start, end) {
     }
     return complete;
 }
-console.log(range(1,3))
-console.log(range(3,1))
-console.log(range("barnacle", 5))
+console.log(range(1,3));
+console.log(range(3,1));
+console.log(range("barnacle", 5));
 
 // Sum function
 
 let sum = function(array) {
     if (typeof(array) != "object") {
         return "!!!!array must be an array!!!!";
-    }
-    let summed_array = 0;
-    for (let i = 0; i < array.length; i += 1) {
-        summed_array += array[i];
+    } else {
+        let summed_array = 0;
+        for (let i = 0; i < array.length; i += 1) {
+            summed_array += array[i];
     }
     return summed_array;
+}
 }
 let test = [1,2,3,4]
 console.log(sum(test))
@@ -74,21 +75,30 @@ let range2 = function(start, end, step = 1) {
     if (typeof(start) != "number" | typeof(end) != "number" | typeof(step) != "number") {
         return "!!!!start, end, and step must be numbers!!!!";
     }
+    if (step == 0) {
+        return "!!!!!Step must be a non-zero number!!!!!";
+    }
     let complete = [];
-    if (start > end) {
+    if (start > end & step >= 1) {
         for (let i = start; i >= end; i -= step) {
             complete.push(i);
         }
-        return complete;
     }
-    else for (let i = start; i <= end; i += step) {
+    if (start > end & step < 0) {
+        return range2(start, end, -step);
+    }
+    for (let i = start; i <= end; i += step) {
         complete.push(i);
     }
     return complete;
 }
-console.log(range2(1,10, 2))
-console.log(sum(range2(1,10, 2)))
-console.log(sum(range2("St", "Boniface", 6)))
+console.log(range2(5, 2, -1));
+console.log(range2(5,8,0));
+console.log(sum(range2(5, 8, 0)));
+console.log(range2(1,10, 2));
+console.log(sum(range2(1,10, 2)));
+console.log(sum(range2(["St", "Boniface", 6])));
+
 
 
 
