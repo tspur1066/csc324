@@ -186,7 +186,7 @@ let range = function(start, end) {
     }
     return complete;
 }
-
+console.log(range(1,20));
 
 // Sum function
 
@@ -197,6 +197,7 @@ let sum = function(array) {
     }
     return summed_array;
 }
+console.log(sum([1,2,3,4]));
 
 
 // Added step parameter
@@ -235,9 +236,10 @@ console.log(reverseArray(["Todd", "MacIntyre", 1, "Aquinas"]))
 // reverseArrayInPlace function
 
 let reverseArrayInPlace = function(array) {
-    for (let i = array.length; i > 0; i -= 1) {
+    let length_of_array = array.length;
+    for (let i = 0; i <= length_of_array; i += 1) {
         array.push(array[i]);
-        
+        array.shift()
     }
     return array;
 }
