@@ -30,6 +30,9 @@
 // Range function
 
 let range = function(start, end) {
+    if (typeof(start) != "number" | typeof(end) != "number") {
+        return "!!!!start and end must be numbers!!!!";
+    }
     let complete = [];
     if (start > end) {
         for (let i = start; i >= end; i -= 1) {
@@ -44,10 +47,14 @@ let range = function(start, end) {
 }
 console.log(range(1,3))
 console.log(range(3,1))
+console.log(range("barnacle", 5))
 
 // Sum function
 
 let sum = function(array) {
+    if (typeof(array) != "object") {
+        return "!!!!array must be an array!!!!";
+    }
     let summed_array = 0;
     for (let i = 0; i < array.length; i += 1) {
         summed_array += array[i];
@@ -64,6 +71,9 @@ console.log(sum(range(1,10)))
 // Added step parameter
 
 let range2 = function(start, end, step = 1) {
+    if (typeof(start) != "number" | typeof(end) != "number" | typeof(step) != "number") {
+        return "!!!!start, end, and step must be numbers!!!!";
+    }
     let complete = [];
     if (start > end) {
         for (let i = start; i >= end; i -= step) {
@@ -78,6 +88,7 @@ let range2 = function(start, end, step = 1) {
 }
 console.log(range2(1,10, 2))
 console.log(sum(range2(1,10, 2)))
+console.log(sum(range2("St", "Boniface", 6)))
 
 
 
@@ -109,13 +120,30 @@ let reverseArray = function(array) {
     }
     return reversed_array;
 }
-let test_rev = [1,2,3,4,5,4,3,2,0];
+let test_rev = [1,2,3,4,5];
 console.log(reverseArray(test_rev));
 console.log(reverseArray(["Todd", "MacIntyre", 1, "Aquinas"]))
 
 // reverseArrayInPlace
 
-// code
+let reverseArrayInPlace = function(array) {
+    let length_of_array = array.length;
+    for (let i = 1; i <= length_of_array; i += 1) {
+        array.push(array[length_of_array - i]);
+    }
+    for (let j = 0; j < length_of_array; j += 1) {
+        array.shift();
+    }
+    return array;
+}
+let testing = [1,2,3,4,5];
+console.log(reverseArrayInPlace(testing));
+console.log(reverseArrayInPlace(["Todd", "MacIntyre", 1, "Aquinas"]))
+
+// From running a few tests, reverseArray appears to run faster overall, though the reason for that
+// may stem from the inefficient code I used for reverseArrayInPlace. I would think generally that
+// a function like reverseArrayInPlace would be more useful, however, since it does not involve creating a whole new
+// array like reverseArray does.
 
 
 

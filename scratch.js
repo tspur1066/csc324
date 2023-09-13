@@ -237,11 +237,16 @@ console.log(reverseArray(["Todd", "MacIntyre", 1, "Aquinas"]))
 
 let reverseArrayInPlace = function(array) {
     let length_of_array = array.length;
-    for (let i = 0; i <= length_of_array; i += 1) {
-        array.push(array[i]);
-        array.shift()
+    for (let i = 1; i <= length_of_array; i += 1) {
+        array.push(array[length_of_array - i]);
+    }
+    for (let j = 0; j < length_of_array; j += 1) {
+        array.shift();
     }
     return array;
 }
 let testing = [1,2,3,4,5];
 console.log(reverseArrayInPlace(testing));
+
+let testing2 = [1,2,3,4];
+console.log(typeof(testing2));
