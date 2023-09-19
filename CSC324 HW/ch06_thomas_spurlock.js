@@ -1,6 +1,6 @@
 // Thomas Spurlock
 // Chapter 6 HW
-// Due: , 2023
+// Due: October 5th, 2023
 
 
 
