@@ -81,6 +81,11 @@ console.log(every_some("Timothy", n => n <10));
 
 // "group" problem
 
-class Group() {
-    constructor()
+class Group {
+    constructor(new_thing) {
+        this.new_thing = new_thing;
+    }
+    add(value) {
+        
+    }
 }
