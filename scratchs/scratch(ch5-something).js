@@ -77,3 +77,10 @@ console.log(every_some([1, 2, 3, 4, 10000], n => n < 10));
 console.log(every_some("Timothy", n => n <10));
 
 
+// Chapter 6 HW
+
+// "group" problem
+
+class Group() {
+    constructor()
+}
