@@ -87,7 +87,7 @@ class Group {
     }
      add(value) {
         if (this.group.includes(value) === true) {
-            return console.log(`!!!${this.name} already contains ${value}!!!`);
+            return console.log(`!!!Group already contains ${value}!!!`);
         }
         else 
         return this.group.push(value);
@@ -110,17 +110,17 @@ class Group {
     }
     static from(array) {
         if (typeof(array) != "object") {
-            console.log("array must be an array!");
-            return
+            return console.log("array must be an array!");
         }
         for(let i = 0; i < array.length; i += 1) {
-            this.group.add(array[i]);
+            let element = array[i];
+            this.group.add(element);
         }
         return Group;
     }
 }
 
-let test = new Group("test");
+let test = new Group;
 console.log(test);
 test.add(2);
 test.add(2);
@@ -129,6 +129,6 @@ test.add(4);
 console.log(test.group)
 console.log(test.has(2));
 console.log(test.delete(2));
-let new_test = Group.from([5, 7]);
-console.log(new_test.group);
+let lame = Group.from([5, 7]);
+console.log(lame.group);
 
