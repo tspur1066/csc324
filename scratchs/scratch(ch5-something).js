@@ -82,9 +82,7 @@ console.log(every_some("Timothy", n => n <10));
 // "group" problem
 
 class Group {
-    constructor(name) {
-        this.name = name;
-        console.log(`Group ${name} has been created.`);
+    constructor() {
         this.group = [];
     }
      add(value) {
@@ -115,10 +113,10 @@ class Group {
             console.log("array must be an array!");
             return
         }
-        new Group;
         for(let i = 0; i < array.length; i += 1) {
             this.group.add(array[i]);
         }
+        return Group;
     }
 }
 
