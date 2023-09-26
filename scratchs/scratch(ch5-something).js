@@ -82,10 +82,55 @@ console.log(every_some("Timothy", n => n <10));
 // "group" problem
 
 class Group {
-    constructor(new_thing) {
-        this.new_thing = new_thing;
+    constructor(name) {
+        this.name = name;
+        console.log(`Group ${name} has been created.`);
+        this.group = [];
     }
-    add(value) {
-        
+     add(value) {
+        if (this.group.includes(value) === true) {
+            return console.log(`!!!${this.name} already contains ${value}!!!`);
+        }
+        else 
+        return this.group.push(value);
+    }
+    delete(value) {
+        if (this.group.includes(value) != true) {
+            console.log(`${value} is not in the group, silly!`);
+            return
+        }
+        if (this.group.length <= 1) {
+            return this.group = [];
+        }
+        return this.group = this.group.filter((n) => n != value);
+    }
+    has(value) {
+        if (this.group.includes(value) === true) {
+            return true
+        }
+        else return false
+    }
+    static from(array) {
+        if (typeof(array) != "object") {
+            console.log("array must be an array!");
+            return
+        }
+        new Group;
+        for(let i = 0; i < array.length; i += 1) {
+            this.group.add(array[i]);
+        }
     }
 }
+
+let test = new Group("test");
+console.log(test);
+test.add(2);
+test.add(2);
+test.add(3);
+test.add(4);
+console.log(test.group)
+console.log(test.has(2));
+console.log(test.delete(2));
+let new_test = Group.from([5, 7]);
+console.log(new_test.group);
+
