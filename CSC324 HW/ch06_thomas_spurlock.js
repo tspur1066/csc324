@@ -25,4 +25,60 @@
 
 // Solution #1
 
-// code goes here 
+class Group {
+    constructor() {
+        this.group = [];
+    }
+     add(value) {
+        if (this.group.includes(value) === true) {
+            return console.log(`!!!Group already contains ${value}!!!`);
+        }
+        else 
+        return this.group.push(value);
+    }
+    delete(value) {
+        if (this.group.includes(value) != true) {
+            console.log(`${value} is not in the group, silly!`);
+            return
+        }
+        if (this.group.length <= 1) {
+            return this.group = [];
+        }
+        return this.group = this.group.filter((n) => n != value);
+    }
+    has(value) {
+        if (this.group.includes(value) === true) {
+            return true
+        }
+        else return false
+    }
+// After much bashing of my head against a wall, I caved and went to the website for how to do the static method.
+// Aside from the minor adjustments needed to fix the static method, all other work is work from myself.
+
+    static from(array) {
+        if (typeof(array) != "object") {
+            return console.log("array must be an array!");
+        }
+        let array_group = new Group;
+        for(let i = 0; i < array.length; i += 1) {
+            let element = array[i];
+            array_group.add(element);
+        }
+        return array_group;
+    }
+}
+
+let test = new Group(25);
+console.log(test);
+test.add(2);
+test.add(2);
+test.add(3);
+test.add(4);
+console.log(test.group)
+console.log(test.has(2));
+console.log(test.delete(2));
+let testing = Group.from([5, 7]);
+console.log(testing.group);
+testing.add(25);
+testing.add(5);
+console.log(testing.group);

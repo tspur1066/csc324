@@ -112,15 +112,16 @@ class Group {
         if (typeof(array) != "object") {
             return console.log("array must be an array!");
         }
+        let array_group = new Group;
         for(let i = 0; i < array.length; i += 1) {
             let element = array[i];
-            this.group.add(element);
+            array_group.add(element);
         }
-        return Group;
+        return array_group;
     }
 }
 
-let test = new Group;
+let test = new Group(25);
 console.log(test);
 test.add(2);
 test.add(2);
@@ -129,6 +130,10 @@ test.add(4);
 console.log(test.group)
 console.log(test.has(2));
 console.log(test.delete(2));
-let lame = Group.from([5, 7]);
-console.log(lame.group);
+let testing = Group.from([5, 7]);
+console.log(testing.group);
+testing.add(25);
+testing.add(5);
+console.log(testing.group);
+
 
