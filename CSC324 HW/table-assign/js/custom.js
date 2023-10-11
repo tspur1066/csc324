@@ -35,3 +35,19 @@
  ]
 
  // complete with code to select and populate the table
+const tableDiv = document.querySelector("#bhangra");
+
+let contents = "<tr>";
+
+artists.forEach(function(artist) {
+  for (let i = 0; i <= artists.length; i += 1) {
+    contents += `<td>${artist[i].name}</td>`;
+    contents += `<td>${artist[i].birthYear}</td>`;
+    contents += `<td><a href= "${artist.link}" target="_blank">a<a></td>`;
+    i += 1;
+  }
+  contents += "<tr>";
+})
+
+
+
