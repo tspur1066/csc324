@@ -1,6 +1,6 @@
 /********************************************************************
  * 
- * Your introductory remarks go here.
+ * Script to write a tab;e of artist names into index.html.
  * 
  *******************************************************************/
 
