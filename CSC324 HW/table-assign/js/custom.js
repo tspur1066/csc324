@@ -46,7 +46,7 @@ contents += "<tr>";
 
 artists.forEach(function(artist) {
   for (let i = 0; i <= artists.length; i += 1) {
-    contents += `<td>${[i].name}</td>`;
+    contents += `<td>${artist[i].name}</td>`;
     contents += `<td>${[i].birthYear}</td>`;
     contents += `<td><a href= "${[i].link}" target="_blank">a<a></td>`;
     i += 1;
