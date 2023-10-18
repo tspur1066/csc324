@@ -34,6 +34,16 @@ const artists = [
     if (a.name > b.name) return 1;
     return 0;
    }
+
+   function byBirth(a, b) {
+    if (a.birthYear < b.birthYear) return -1;
+    if (a.birthYear > b.birthYear) return 1;
+    return 0;
+   }
+
+   console.log(artists.sort(byBirth));
+
+
   
    // now, sort:
    console.log(artists.sort(byName));
@@ -73,10 +83,12 @@ const artists = [
   // Then you could use the above ideas to add
   // an event-listener to the button
   // to show a randomly-selected artist:
-  const randomButton = document.querySelector("#random-button");
-  randomButton.addEventListener("click", showRandomArtist);
+
   
-  function showRandomArtist() {
-    const artist = document.querySelector("#random-artist");
-    artist.innerHTML = pickArtist();
-  }
+  // const randomButton = document.querySelector("#random-button");
+  // randomButton.addEventListener("click", showRandomArtist);
+  
+  // function showRandomArtist() {
+  //   const artist = document.querySelector("#random-artist");
+  //   artist.innerHTML = pickArtist();
+  // }

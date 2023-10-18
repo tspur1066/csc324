@@ -1,6 +1,6 @@
 /********************************************************************
  * 
- * Script to write a tab;e of artist names into index.html.
+ * Script to write a table of artist names into index.html.
  * 
  *******************************************************************/
 
