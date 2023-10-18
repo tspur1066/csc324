@@ -80,6 +80,7 @@ function populateTable(arr) {
 
 // declare listener-functions
 
+// byName function
 function byName(a, b) {
   if (a.name < b.name) return -1;
   if (a.name > b.name) return 1;
@@ -92,6 +93,41 @@ function sortByName() {
  let sortedArray = artists.sort(byName);
  populateTable(sortedArray);
 }
+
+
+
+// byBirth function
+function byBirth(a, b) {
+  if (a.birthYear < b.birthYear) return -1;
+  if (a.birthYear > b.birthYear) return 1;
+  return 0;
+ }
+
+ function sortByBirth() {
+  let birthArray = artists.sort(byBirth);
+  populateTable(birthArray);
+ }
+
+
+
+ // Shuffle method
+Array.prototype.shuffle = function() {
+  let input = this;
+  for (let i = input.length-1; i >= 0; i--) {
+    let randomIndex = Math.floor(Math.random()*(i+1));
+    let itemAtIndex = input[randomIndex];
+    input[randomIndex] = input[i];
+    input[i] = itemAtIndex;
+  }
+ return input;
+}
+
+function sortRandom() {
+  let randArray = artists.shuffle();
+  populateTable(randArray);
+}
+
+
 
 // function to populate a table:
 function populateTable(arr) {
@@ -118,33 +154,6 @@ function populateTable(arr) {
    tab.innerHTML = contents;
 }
 
-// byBirth function
-function byBirth(a, b) {
-  if (a.birthYear < b.birthYear) return -1;
-  if (a.birthYear > b.birthYear) return 1;
-  return 0;
- }
-
- function sortByBirth() {
-  let birthArray = artists.sort(byBirth);
-  populateTable(birthArray);
- }
 
 
-// Shuffle method
-Array.prototype.shuffle = function() {
-  let input = this;
-  for (let i = input.length-1; i >= 0; i--) {
-    let randomIndex = Math.floor(Math.random()*(i+1));
-    let itemAtIndex = input[randomIndex];
-    input[randomIndex] = input[i];
-    input[i] = itemAtIndex;
-  }
- return input;
-}
-
-function sortRandom() {
-  let randArray = artists.shuffle();
-  populateTable(randArray);
-}
 
