@@ -128,32 +128,3 @@ function sortRandom() {
 }
 
 
-
-// function to populate a table:
-function populateTable(arr) {
- let contents = "<tbody>";
- // get in the header row:
- contents += `
-   <tr>
-     <th>Name</th>
-     <th>Year of Birth</th>
-     <th>Link</th>
-   </tr>
-   `;
-   arr.forEach(artist => {
-     // open the row:
-     contents += "<tr>";
-     contents += `<td>${artist.name}</td>`;
-     contents += `<td>${artist.birthYear}</td>`;
-     contents += `<td><a href="${artist.link} target = "_blank">${artist.link}</a></td>`;
-     // close the row:
-     contents += "</tr>"
-   });
-   // close out the table body:
-   contents += "</tbody>";
-   tab.innerHTML = contents;
-}
-
-
-
-
